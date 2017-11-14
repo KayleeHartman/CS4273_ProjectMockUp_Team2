@@ -10,7 +10,7 @@ using System.Windows.Forms;
 //THIS PAGE IS NOT DONE - Sara Richardson
 namespace ParkingPrototypeApp
 {
-    public partial class Home : Form
+    public partial class ChooseSpot : Form
     {
 		List<Button> buttonList = new List<Button>();
 		List<Int32> firstSpots = new List<Int32>();
@@ -22,7 +22,7 @@ namespace ParkingPrototypeApp
 		List<List<Int32>> floorLists = new List<List<Int32>>();
 		Random rdm = new Random();
 
-		public Home()
+		public ChooseSpot()
         {
             InitializeComponent();
 
@@ -41,7 +41,7 @@ namespace ParkingPrototypeApp
 			for (int i = 0; i < buttonList.Count; i++)
 			{
 				buttonList[i].Enabled = true;
-				if (i < 17 )
+				if (i < 17)
 				{
 					buttonList[i].BackColor = Color.LimeGreen;
 				}

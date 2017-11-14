@@ -1,6 +1,6 @@
 ﻿namespace ParkingPrototypeApp
 {
-    partial class Home
+    partial class ChooseSpot
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChooseSpot));
 			this.selectFloorCB = new System.Windows.Forms.ComboBox();
 			this.button01 = new System.Windows.Forms.Button();
 			this.button02 = new System.Windows.Forms.Button();
@@ -71,7 +72,7 @@
 			// 
 			// button01
 			// 
-			this.button01.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.button01.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.button01.Location = new System.Drawing.Point(12, 112);
 			this.button01.Name = "button01";
 			this.button01.Size = new System.Drawing.Size(170, 75);
@@ -93,7 +94,7 @@
 			// 
 			// button03
 			// 
-			this.button03.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.button03.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.button03.Location = new System.Drawing.Point(12, 274);
 			this.button03.Name = "button03";
 			this.button03.Size = new System.Drawing.Size(170, 75);
@@ -144,7 +145,7 @@
 			// 
 			// button08
 			// 
-			this.button08.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.button08.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.button08.Location = new System.Drawing.Point(188, 274);
 			this.button08.Name = "button08";
 			this.button08.Size = new System.Drawing.Size(170, 75);
@@ -155,7 +156,7 @@
 			// 
 			// button09
 			// 
-			this.button09.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.button09.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.button09.Location = new System.Drawing.Point(188, 355);
 			this.button09.Name = "button09";
 			this.button09.Size = new System.Drawing.Size(170, 75);
@@ -176,7 +177,7 @@
 			// 
 			// button16
 			// 
-			this.button16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+			this.button16.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.button16.Location = new System.Drawing.Point(722, 112);
 			this.button16.Name = "button16";
 			this.button16.Size = new System.Drawing.Size(170, 75);
@@ -197,7 +198,7 @@
 			// 
 			// button18
 			// 
-			this.button18.BackColor = System.Drawing.SystemColors.Highlight;
+			this.button18.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.button18.Location = new System.Drawing.Point(722, 274);
 			this.button18.Name = "button18";
 			this.button18.Size = new System.Drawing.Size(170, 75);
@@ -208,7 +209,7 @@
 			// 
 			// button19
 			// 
-			this.button19.BackColor = System.Drawing.SystemColors.Highlight;
+			this.button19.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.button19.Location = new System.Drawing.Point(722, 355);
 			this.button19.Name = "button19";
 			this.button19.Size = new System.Drawing.Size(170, 75);
@@ -219,7 +220,7 @@
 			// 
 			// button20
 			// 
-			this.button20.BackColor = System.Drawing.SystemColors.Highlight;
+			this.button20.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.button20.Location = new System.Drawing.Point(722, 436);
 			this.button20.Name = "button20";
 			this.button20.Size = new System.Drawing.Size(170, 75);
@@ -251,7 +252,7 @@
 			// 
 			// button13
 			// 
-			this.button13.BackColor = System.Drawing.SystemColors.Highlight;
+			this.button13.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.button13.Location = new System.Drawing.Point(546, 274);
 			this.button13.Name = "button13";
 			this.button13.Size = new System.Drawing.Size(170, 75);
@@ -262,7 +263,7 @@
 			// 
 			// button14
 			// 
-			this.button14.BackColor = System.Drawing.SystemColors.Highlight;
+			this.button14.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.button14.Location = new System.Drawing.Point(546, 355);
 			this.button14.Name = "button14";
 			this.button14.Size = new System.Drawing.Size(170, 75);
@@ -273,7 +274,7 @@
 			// 
 			// button15
 			// 
-			this.button15.BackColor = System.Drawing.SystemColors.Highlight;
+			this.button15.BackColor = System.Drawing.SystemColors.ControlLight;
 			this.button15.Location = new System.Drawing.Point(546, 436);
 			this.button15.Name = "button15";
 			this.button15.Size = new System.Drawing.Size(170, 75);
@@ -282,7 +283,7 @@
 			this.button15.UseVisualStyleBackColor = false;
 			this.button15.Click += new System.EventHandler(this.buttonClick);
 			// 
-			// Home
+			// ChooseSpot
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -308,8 +309,9 @@
 			this.Controls.Add(this.button02);
 			this.Controls.Add(this.button01);
 			this.Controls.Add(this.selectFloorCB);
-			this.Name = "Home";
-			this.Text = " ";
+			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+			this.Name = "ChooseSpot";
+			this.Text = " Choose Your Spot";
 			this.Load += new System.EventHandler(this.Home_Load);
 			this.ResumeLayout(false);
 

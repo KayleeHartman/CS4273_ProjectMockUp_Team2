@@ -28,7 +28,7 @@ namespace ParkingPrototypeApp
         private void button2_Click_1(object sender, EventArgs e)
         {
             //Go to Home Page
-            Home page = new Home();
+            ChooseSpot page = new ChooseSpot();
             page.Show();
             this.Hide();
         }

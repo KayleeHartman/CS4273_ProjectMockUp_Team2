@@ -12,31 +12,19 @@ namespace ParkingPrototypeApp
 {
     public partial class Home : Form
     {
-        public Home()
+		List<Button> buttonList = new List<Button>();
+		List<Int32> firstSpots = new List<Int32>();
+		List<Int32> secondSpots = new List<Int32>();
+		List<Int32> thirdSpots = new List<Int32>();
+		List<Int32> fourthSpots = new List<Int32>();
+		List<Int32> fifthSpots = new List<Int32>();
+
+		List<List<Int32>> floorLists = new List<List<Int32>>();
+		Random rdm = new Random();
+
+		public Home()
         {
             InitializeComponent();
-
-			Button[] buttonArray = new Button [20];
-			buttonArray[0] = button01;
-			buttonArray[1] = button02;
-			buttonArray[2] = button03;
-			buttonArray[3] = button04;
-			buttonArray[4] = button05;
-			buttonArray[5] = button06;
-			buttonArray[6] = button07;
-			buttonArray[7] = button08;
-			buttonArray[8] = button09;
-			buttonArray[9] = button10;
-			buttonArray[10] = button11;
-			buttonArray[11] = button12;
-			buttonArray[12] = button13;
-			buttonArray[13] = button14;
-			buttonArray[14] = button15;
-			buttonArray[15] = button16;
-			buttonArray[16] = button17;
-			buttonArray[17] = button18;
-			buttonArray[18] = button19;
-			buttonArray[19] = button20;
 
 		}
 
@@ -50,31 +38,140 @@ namespace ParkingPrototypeApp
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(selectFloorCB.Text == "First Floor")
-            {
-                //make all the buttons say "L1 - x"
-                for(int i = 1; i <= 15; i++)
-                {
-                  
-                }
-            }
-            else if(selectFloorCB.Text == "Second Floor")
-            {
-                //second floor
-
-            }else if(selectFloorCB.Text == "Third Floor")
-            {
-                //third floor
-
-
-            }else if(selectFloorCB.Text == "Fourth Floor")
-            {
-                //fourth floor
-
-            }else
-            {
-                //fifth floor.
-            }
+			for (int i = 0; i < buttonList.Count; i++)
+			{
+				buttonList[i].Enabled = true;
+				if (i < 17 )
+				{
+					buttonList[i].BackColor = Color.LimeGreen;
+				}
+				else
+				{
+					buttonList[i].BackColor = Color.RoyalBlue;
+				}
+			}
+			string floor = selectFloorCB.Text;
+			switch (floor) {
+				case "First Floor":
+					for (int i = 0; i < buttonList.Count; i++) {
+						buttonList[i].Text = ("L1 - " + (i + 1));
+						for (int j = 0; j < firstSpots.Count; j++) {
+							if (i == firstSpots.ElementAt(j))
+							{
+								buttonList[i].Enabled = false;
+								buttonList[i].BackColor = Control.DefaultBackColor;
+							}
+						}
+					}
+					break;
+				case "Second Floor":
+					for (int i = 0; i < buttonList.Count; i++)
+					{
+						buttonList[i].Text = ("L2 - " + (i + 1));
+						for (int j = 0; j < secondSpots.Count; j++)
+						{
+							if (i == secondSpots.ElementAt(j))
+							{
+								buttonList[i].Enabled = false;
+								buttonList[i].BackColor = Control.DefaultBackColor;
+							}
+						}
+					}
+					break;
+				case "Third Floor":
+					for (int i = 0; i < buttonList.Count; i++)
+					{
+						buttonList[i].Text = ("L3 - " + (i + 1));
+						for (int j = 0; j < thirdSpots.Count; j++)
+						{
+							if (i == thirdSpots.ElementAt(j))
+							{
+								buttonList[i].Enabled = false;
+								buttonList[i].BackColor = Control.DefaultBackColor;
+							}
+						}
+					}
+					break;
+				case "Fourth Floor":
+					for (int i = 0; i < buttonList.Count; i++)
+					{
+						buttonList[i].Text = ("L4 - " + (i + 1));
+						for (int j = 0; j < fourthSpots.Count; j++)
+						{
+							if (i == fourthSpots.ElementAt(j))
+							{
+								buttonList[i].Enabled = false;
+								buttonList[i].BackColor = Control.DefaultBackColor;
+							}
+						}
+					}
+					break;
+				case "Fifth Floor":
+					for (int i = 0; i < buttonList.Count; i++)
+					{
+						buttonList[i].Text = ("L5 - " + (i + 1));
+						for (int j = 0; j < fifthSpots.Count; j++)
+						{
+							if (i == fifthSpots.ElementAt(j))
+							{
+								buttonList[i].Enabled = false;
+								buttonList[i].BackColor = Control.DefaultBackColor;
+							}
+						}
+					}
+					break;
+				default:
+					break;
+			}
         }
+
+		void comboBox1_MouseWheel(object sender, MouseEventArgs e)
+		{
+			((HandledMouseEventArgs)e).Handled = true;
+		}
+
+		private void Home_Load(object sender, EventArgs e)
+		{
+			buttonList.Add(button01);
+			buttonList.Add(button02);
+			buttonList.Add(button03);
+			buttonList.Add(button04);
+			buttonList.Add(button05);
+			buttonList.Add(button06);
+			buttonList.Add(button07);
+			buttonList.Add(button08);
+			buttonList.Add(button09);
+			buttonList.Add(button10);
+			buttonList.Add(button11);
+			buttonList.Add(button12);
+			buttonList.Add(button13);
+			buttonList.Add(button14);
+			buttonList.Add(button15);
+			buttonList.Add(button16);
+			buttonList.Add(button17);
+			buttonList.Add(button18);
+			buttonList.Add(button19);
+			buttonList.Add(button20);
+
+			floorLists.Add(firstSpots);
+			floorLists.Add(secondSpots);
+			floorLists.Add(thirdSpots);
+			floorLists.Add(fourthSpots);
+			floorLists.Add(fifthSpots);
+
+			for (int j = 0; j < floorLists.Count; j++)
+			{
+				int numOfAvailable = rdm.Next(0, buttonList.Count);
+				for (int i = 0; i < numOfAvailable; i++)
+				{
+					int randSpot = rdm.Next(0, buttonList.Count);
+					floorLists.ElementAt(j).Add(randSpot);
+				}
+			}
+
+			selectFloorCB.Text = "First Floor";
+			selectFloorCB.SelectedIndexChanged += new System.EventHandler(comboBox1_SelectedIndexChanged);
+			selectFloorCB.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
+		}
 	}
 }

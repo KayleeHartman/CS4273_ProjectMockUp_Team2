@@ -37,9 +37,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(197, 184);
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label1.Location = new System.Drawing.Point(179, 197);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(158, 20);
+            this.label1.Size = new System.Drawing.Size(192, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Scan Your QR Code.";
             // 

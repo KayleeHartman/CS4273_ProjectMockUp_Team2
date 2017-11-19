@@ -173,5 +173,12 @@ namespace ParkingPrototypeApp
 			selectFloorCB.SelectedIndexChanged += new System.EventHandler(comboBox1_SelectedIndexChanged);
 			selectFloorCB.MouseWheel += new MouseEventHandler(comboBox1_MouseWheel);
 		}
-	}
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            LogIn page = new LogIn();
+            page.Show();
+            this.Hide();
+        }
+    }
 }

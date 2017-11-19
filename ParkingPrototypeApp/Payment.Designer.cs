@@ -45,18 +45,20 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.label1.Location = new System.Drawing.Point(61, 184);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 20);
+            this.label1.Size = new System.Drawing.Size(109, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "Total Cost:";
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(92, 246);
+            this.button2.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.button2.Location = new System.Drawing.Point(66, 246);
             this.button2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 59);
+            this.button2.Size = new System.Drawing.Size(170, 75);
             this.button2.TabIndex = 2;
             this.button2.Text = "Credit";
             this.button2.UseVisualStyleBackColor = true;
@@ -64,10 +66,11 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(340, 246);
+            this.button3.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.button3.Location = new System.Drawing.Point(308, 246);
             this.button3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(134, 59);
+            this.button3.Size = new System.Drawing.Size(170, 75);
             this.button3.TabIndex = 3;
             this.button3.Text = "Debit";
             this.button3.UseVisualStyleBackColor = true;
@@ -76,9 +79,10 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(88, 111);
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.label2.Location = new System.Drawing.Point(98, 111);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(58, 20);
+            this.label2.Size = new System.Drawing.Size(72, 27);
             this.label2.TabIndex = 4;
             this.label2.Text = "Extras:";
             this.label2.Click += new System.EventHandler(this.label2_Click);
@@ -86,9 +90,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.label3.Location = new System.Drawing.Point(52, 144);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(94, 20);
+            this.label3.Size = new System.Drawing.Size(120, 27);
             this.label3.TabIndex = 5;
             this.label3.Text = "Time Spent:";
             // 
@@ -112,33 +117,37 @@
             // extrasCostLabel
             // 
             this.extrasCostLabel.AutoSize = true;
+            this.extrasCostLabel.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.extrasCostLabel.Location = new System.Drawing.Point(416, 111);
             this.extrasCostLabel.Name = "extrasCostLabel";
-            this.extrasCostLabel.Size = new System.Drawing.Size(0, 20);
+            this.extrasCostLabel.Size = new System.Drawing.Size(0, 27);
             this.extrasCostLabel.TabIndex = 8;
             // 
             // timeCostLabel
             // 
             this.timeCostLabel.AutoSize = true;
+            this.timeCostLabel.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.timeCostLabel.Location = new System.Drawing.Point(416, 144);
             this.timeCostLabel.Name = "timeCostLabel";
-            this.timeCostLabel.Size = new System.Drawing.Size(0, 20);
+            this.timeCostLabel.Size = new System.Drawing.Size(0, 27);
             this.timeCostLabel.TabIndex = 9;
             // 
             // totalCostLabel
             // 
             this.totalCostLabel.AutoSize = true;
+            this.totalCostLabel.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.totalCostLabel.Location = new System.Drawing.Point(416, 184);
             this.totalCostLabel.Name = "totalCostLabel";
-            this.totalCostLabel.Size = new System.Drawing.Size(0, 20);
+            this.totalCostLabel.Size = new System.Drawing.Size(0, 27);
             this.totalCostLabel.TabIndex = 10;
             // 
             // button1
             // 
+            this.button1.Font = new System.Drawing.Font("Palatino Linotype", 10F);
             this.button1.Location = new System.Drawing.Point(14, 12);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 62);
+            this.button1.Size = new System.Drawing.Size(170, 75);
             this.button1.TabIndex = 11;
             this.button1.Text = "Go Back to Start";
             this.button1.UseVisualStyleBackColor = true;

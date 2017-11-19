@@ -18,14 +18,15 @@ namespace ParkingPrototypeApp
             InitializeComponent();          
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
             //Go to Scan Page
             ScanQR page = new ScanQR();
             page.Show();
             this.Hide();
         }
-        private void button2_Click_1(object sender, EventArgs e)
+
+        private void button2_Click(object sender, EventArgs e)
         {
             //Go to Home Page
             ChooseSpot page = new ChooseSpot();

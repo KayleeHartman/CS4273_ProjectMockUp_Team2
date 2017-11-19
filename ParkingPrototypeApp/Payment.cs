@@ -25,13 +25,6 @@ namespace ParkingPrototypeApp
         public Payment()
         {
             InitializeComponent();
-            
-
-            //the only thing needed here is that whatever was selected from the Extras page 
-            //needs to be displayed here
-            //and the total cost on the Extras page will needed to be updated.
-            //then change the total price.
-            //Do Not CHANGE ANYTHING ELSE.      -Sara Richardson
 
         }
 

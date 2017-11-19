@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//THIS PAGE IS NOT DONE - Sara Richardson
+//THIS PAGE IS DONE - Sara Richardson
 namespace ParkingPrototypeApp
 {
     public partial class ChooseSpot : Form
@@ -25,12 +25,11 @@ namespace ParkingPrototypeApp
 		public ChooseSpot()
         {
             InitializeComponent();
-
 		}
 
 		private void buttonClick(object sender, EventArgs e)
         {
-			//if button clicked is green, continue on to "Extras" page.
+			//if button clicked is green, continue on to "Extras" page. - Sara Richardson
 			Extras page = new Extras();
 			page.Show();
 			this.Hide();
@@ -132,7 +131,8 @@ namespace ParkingPrototypeApp
 
 		private void Home_Load(object sender, EventArgs e)
 		{
-			buttonList.Add(button01);
+          
+            buttonList.Add(button01);
 			buttonList.Add(button02);
 			buttonList.Add(button03);
 			buttonList.Add(button04);

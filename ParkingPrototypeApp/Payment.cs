@@ -12,6 +12,7 @@ namespace ParkingPrototypeApp
 {
     public partial class Payment : Form
     {
+        // Declared all the variables globally such that they can be used in other methods
         double totalCost = 0;
         double extrasCost = 0;
         double timeCost = 0;
@@ -24,16 +25,6 @@ namespace ParkingPrototypeApp
         public Payment()
         {
             InitializeComponent();
-            
-
-            //the only thing needed here is that whatever was selected from the Extras page 
-            //needs to be displayed here
-            //and the total cost on the Extras page will needed to be updated.
-            //then change the total price.
-            //Do Not CHANGE ANYTHING ELSE.      -Sara Richardson
-
-            //totalCost = extrasCost + timeCost;
-           // totalCostLabel.Text = "$" + totalCost;
 
         }
 
@@ -62,10 +53,14 @@ namespace ParkingPrototypeApp
             this.Hide();
         }
 
+        //Main method Which takes care of the logic of generating extras 
+        // As soon as this page gets loaded, this method gets executed first
+
         private void Payment_Load(object sender, EventArgs e)
         {
             randomNumber = rand.Next(1, 7);
 
+            //Switch case for the extras that can be selected and calculating the price for them accordingly.
             switch (randomNumber)
             {
                 case 1:

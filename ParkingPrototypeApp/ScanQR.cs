@@ -20,7 +20,7 @@ namespace ParkingPrototypeApp
         private void timer1_Tick(object sender, EventArgs e)
         {
             timer1.Enabled = false;
-            //after 10 seconds, move on to payment total page.
+            //after 5 seconds, move on to payment total page.
             Payment page = new Payment();
             page.Show();
             this.Hide();            

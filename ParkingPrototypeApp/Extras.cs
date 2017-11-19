@@ -44,9 +44,9 @@ namespace ParkingPrototypeApp
 
 
 
-            int firstItem = 10;     //$10
-            int secondItem = 9;     //$9
-            int thirdItem = 15;     //$15
+            int firstItem = 3;     //$10
+            int secondItem = 4;     //$9
+            int thirdItem = 5;     //$15
 
             //Add total for each clicked and update the costTotalLabel.      
             //the following code does not work, it's just a head start for you all 

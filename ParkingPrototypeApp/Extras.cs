@@ -12,10 +12,15 @@ namespace ParkingPrototypeApp
 {
     public partial class Extras : Form
     {
+        public static int totalPrice = 0;
+        public static int flag1 = 0;
+        public static int flag2 = 0;
+        public static int flag3 = 0;
+
         public Extras()
         {
             InitializeComponent();
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -36,8 +41,9 @@ namespace ParkingPrototypeApp
             //if the third item was selected, add "thirdItem" to "totalPrice"
             //- Sara Richardson
 
-            int totalPrice = 0;
-      
+
+
+
             int firstItem = 10;     //$10
             int secondItem = 9;     //$9
             int thirdItem = 15;     //$15
@@ -46,25 +52,63 @@ namespace ParkingPrototypeApp
             //the following code does not work, it's just a head start for you all 
             //to get an idea of what it would possibly look like. - Sara Richardson
 
-            //if (extrasCheckbox.SelectedIndex.Equals("0"))
-            //{
-            //    totalPrice += firstItem;
-            //    costTotalLabel.Text = "+ $" + totalPrice;
-            //}
-            //if (extrasCheckbox.SelectedIndex.Equals("1"))
-            //{
-            //    totalPrice += secondItem;
-            //    costTotalLabel.Text = "+ $" + totalPrice;
-            //}
-            //if (extrasCheckbox.SelectedIndex.Equals("2"))
-            //{
-            //    totalPrice += thirdItem;
-            //    costTotalLabel.Text = "+ $" + totalPrice;
-            //}
-          
+            if (extrasCheckbox.SelectedIndex == 0)
+            {
+                if (flag1 == 1)
+
+                {
+                    totalPrice = totalPrice - firstItem;
+                    flag1 = 0;
+
+                }
+                else
+                {
+                    totalPrice = totalPrice + firstItem;
+                    costTotalLabel.Text = "+ $" + totalPrice;
+                    flag1 = 1;
+                }
+
+            }
+
+
+            if (extrasCheckbox.SelectedIndex == 1)
+            {
+                if (flag2 == 1)
+
+                {
+                    totalPrice = totalPrice - secondItem;
+                    flag2 = 0;
+
+                }
+                else
+                {
+                    totalPrice = totalPrice + secondItem;
+                    costTotalLabel.Text = "+ $" + totalPrice;
+                    flag2 = 1;
+                }
+
+            }
+            if (extrasCheckbox.SelectedIndex == 2)
+            {
+                if (flag3 == 1)
+
+                {
+                    totalPrice = totalPrice - thirdItem;
+                    flag3 = 0;
+
+                }
+                else
+                {
+                    totalPrice = totalPrice + thirdItem;
+                    costTotalLabel.Text = "+ $" + totalPrice;
+                    flag3 = 1;
+                }
+
+            }
+
             //do not use this code, it is a placeholder so some error won't say
             //these variables aren't being used.
-            totalPrice = firstItem + secondItem + thirdItem;    //do not use this code.
+            // totalPrice = firstItem + secondItem + thirdItem;    //do not use this code.
 
             //use this
             costTotalLabel.Text = "+ $" + totalPrice;
@@ -77,5 +121,11 @@ namespace ParkingPrototypeApp
             page.Show();
             this.Hide();
         }
+
+        private void Extras_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
+

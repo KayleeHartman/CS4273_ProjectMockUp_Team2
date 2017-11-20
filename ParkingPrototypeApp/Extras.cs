@@ -41,10 +41,7 @@ namespace ParkingPrototypeApp
             //if the third item was selected, add "thirdItem" to "totalPrice"
             //- Sara Richardson
 
-
-
-
-            int firstItem = 3;     //$10
+			int firstItem = 3;     //$10
             int secondItem = 4;     //$9
             int thirdItem = 5;     //$15
 
@@ -54,9 +51,7 @@ namespace ParkingPrototypeApp
 
             if (extrasCheckbox.SelectedIndex == 0)
             {
-                if (flag1 == 1)
-
-                {
+                if (flag1 == 1) {
                     totalPrice = totalPrice - firstItem;
                     flag1 = 0;
 
@@ -67,15 +62,11 @@ namespace ParkingPrototypeApp
                     costTotalLabel.Text = "+ $" + totalPrice;
                     flag1 = 1;
                 }
-
             }
-
 
             if (extrasCheckbox.SelectedIndex == 1)
             {
-                if (flag2 == 1)
-
-                {
+                if (flag2 == 1) {
                     totalPrice = totalPrice - secondItem;
                     flag2 = 0;
 
@@ -88,6 +79,7 @@ namespace ParkingPrototypeApp
                 }
 
             }
+
             if (extrasCheckbox.SelectedIndex == 2)
             {
                 if (flag3 == 1)

@@ -7,38 +7,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//THIS PAGE IS NOT DONE - Sara Richardson
-namespace ParkingPrototypeApp
-{
-    public partial class PaymentProcess : Form
-    {
-        public PaymentProcess()
-        {
-            InitializeComponent();
-        }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //make sure card number is an integer
-            //make sure user entered a card number
-            //make sure CVV number is an integer
-            //make sure user entered a CVV number
-            //make sure expiration date is not today's date.
-            //make sure expiration date cannot go back in time. - Sara Richardson
+namespace ParkingPrototypeApp {
+	public partial class PaymentProcess : Form {
+		public PaymentProcess()	{
+			InitializeComponent();
+		}
 
+		private void button1_Click(object sender, EventArgs e) {
+			long i;
+			int j;
+			bool a, b, c, d;
 
-            //go to thank you page.
-            ThankYouPage page = new ThankYouPage();
-            page.Show();
-            this.Hide();
-        }
+			// checks if the cvv has the correct length
+			if (textBox2.TextLength != 3) {
+				MessageBox.Show("CVV must be 3 digits.");
+			}
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //go back to credit or debit
-            Payment page = new Payment();
-            page.Show();
-            this.Hide();
-        }
-    }
+			// notifies when the length of card number is incorrect
+			if (textBox1.TextLength != 16) {
+				MessageBox.Show("Card Number must be 16 digits.");
+			}
+
+			// prompts error message to correct CVV when incorrect input type is entered
+			if (!(int.TryParse(textBox2.Text, out j))) {
+				MessageBox.Show("CVV must be numerical characters.");
+			}
+
+			// prompts error message to correct Card no when incorrect input type is entered
+			if (!(Int64.TryParse(textBox1.Text, out i))) {
+				MessageBox.Show("Card Number must be numerical characters.");
+			}
+			
+			else {
+				ThankYouPage page = new ThankYouPage();
+				page.Show();
+				this.Hide();
+			}
+		}
+
+		private void button2_Click(object sender, EventArgs e) {
+			Payment page = new Payment();
+			page.Show();
+			this.Hide();
+		}
+
+		// this makes sure that the user cannot enter past date as expiration date
+		private void PaymentProcess_Load(object sender, EventArgs e) {
+			dateTimePicker1.MinDate = System.DateTime.Today;
+		}
+	}
 }

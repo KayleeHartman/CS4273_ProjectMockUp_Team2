@@ -36,6 +36,7 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Palatino Linotype", 10F);
+            this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button2.Location = new System.Drawing.Point(148, 109);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(249, 66);
@@ -57,8 +58,7 @@
             // 
             // LogIn
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(543, 454);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

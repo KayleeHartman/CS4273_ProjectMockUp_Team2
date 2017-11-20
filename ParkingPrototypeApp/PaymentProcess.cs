@@ -17,29 +17,36 @@ namespace ParkingPrototypeApp {
 		private void button1_Click(object sender, EventArgs e) {
 			long i;
 			int j;
-			bool a, b, c, d;
+			bool a = true;
+			bool b = true;
+			bool c = true;
+			bool d = true;
 
 			// checks if the cvv has the correct length
 			if (textBox2.TextLength != 3) {
 				MessageBox.Show("CVV must be 3 digits.");
+				a = false;
 			}
 
 			// notifies when the length of card number is incorrect
 			if (textBox1.TextLength != 16) {
 				MessageBox.Show("Card Number must be 16 digits.");
+				b = false;
 			}
 
 			// prompts error message to correct CVV when incorrect input type is entered
 			if (!(int.TryParse(textBox2.Text, out j))) {
 				MessageBox.Show("CVV must be numerical characters.");
+				c = false;
 			}
 
 			// prompts error message to correct Card no when incorrect input type is entered
 			if (!(Int64.TryParse(textBox1.Text, out i))) {
 				MessageBox.Show("Card Number must be numerical characters.");
+				d = false;
 			}
 			
-			else {
+			if (a && b && c && d) {
 				ThankYouPage page = new ThankYouPage();
 				page.Show();
 				this.Hide();
